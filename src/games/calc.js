@@ -2,16 +2,11 @@ import playGame from '../index.js';
 import getRandom from '../random.js';
 
 const descriptionGame = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
 
-const calculate = () => {
-  const operators = ['+', '-', '*'];
-  const number1 = getRandom(1, 25);
-  const number2 = getRandom(1, 25);
-  const randomOperators = operators[getRandom(0, operators.length - 1)];
-  const question = `${number1} ${randomOperators} ${number2}`;
-
+const calculate = (number1, operator, number2) => {
   let correctAnswer = 0;
-  switch (randomOperators) {
+  switch (operator) {
     case '+':
       correctAnswer = number1 + number2;
       break;
@@ -22,13 +17,21 @@ const calculate = () => {
       correctAnswer = number1 * number2;
       break;
     default:
-      correctAnswer = null;
+      console.log('Error');
   }
-
-  correctAnswer = correctAnswer.toString();
-  return [question, correctAnswer];
+  return correctAnswer;
 };
 
-playGame(descriptionGame, calculate);
+const getRound = () => {
+  const number1 = getRandom(1, 25);
+  const number2 = getRandom(1, 25);
+  const randomOperator = operators[getRandom(0, operators.length - 1)];
+  const question = `${number1} ${randomOperator} ${number2}`;
+  const expectedAnswer = calculate(number1, randomOperator, number2).toString();
 
-export default calculate;
+  return [question, expectedAnswer];
+};
+
+const calc = () => playGame(descriptionGame, getRound);
+
+export default calc;
