@@ -32,6 +32,6 @@ const getRound = () => {
   return [question, expectedAnswer];
 };
 
-const calc = () => playGame(descriptionGame, getRound);
+const startCalculate = () => playGame(descriptionGame, getRound);
 
-export default calc;
+export default startCalculate;
