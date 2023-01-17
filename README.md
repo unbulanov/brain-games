@@ -5,6 +5,10 @@
 ## Description:
 Welcome to my first project. These are brain games, consisting of five console games.
 
+## Requirements:
+1. OS Mac / Linux;
+2. Node.js version 18 or later.
+
 ## Setup:
 1. Install Node.js and (or) upgrade to the latest version global;
 2. Clone this repository;
@@ -27,7 +31,7 @@ prime number check;
 <a href="https://asciinema.org/a/kO5wr7XxGDPQso9no0xSQAbko" target="_blank"><img src="https://asciinema.org/a/kO5wr7XxGDPQso9no0xSQAbko.svg" /></a>
 
 ### Brain-calc
-<a href="https://asciinema.org/a/xIB7hZDLFD2JCiZJ5Jr8tvp0a" target="_blank"><img src="https://asciinema.org/a/xIB7hZDLFD2JCiZJ5Jr8tvp0a.svg" /></a>
+<a href="https://asciinema.org/a/ATinEZJV51K61xoSkLBl8GLLh" target="_blank"><img src="https://asciinema.org/a/ATinEZJV51K61xoSkLBl8GLLh.svg" /></a>
 
 ### Brain-gcd
 <a href="https://asciinema.org/a/DvbkDiQu7YwhyuY5z9dnWeNK8" target="_blank"><img src="https://asciinema.org/a/DvbkDiQu7YwhyuY5z9dnWeNK8.svg" /></a>
