@@ -1,4 +1,4 @@
-import gameEngine from '../index.js';
+import playGame from '../index.js';
 import getRandom from '../random.js';
 
 const descriptionGame = 'What number is missing in the progression?';
@@ -20,6 +20,6 @@ const progression = () => {
   return [newArray.join(' ').toString(), result.toString()];
 };
 
-gameEngine(descriptionGame, progression);
+playGame(descriptionGame, progression);
 
 export default progression;

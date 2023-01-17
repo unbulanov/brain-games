@@ -1,4 +1,4 @@
-import gameEngine from '../index.js';
+import playGame from '../index.js';
 import getRandom from '../random.js';
 
 const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -22,6 +22,6 @@ const prime = () => {
   return [randomNumber, result];
 };
 
-gameEngine(descriptionGame, prime);
+playGame(descriptionGame, prime);
 
 export default prime;
