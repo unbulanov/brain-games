@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/unbulanov/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/unbulanov/frontend-project-44/actions)",
+  "description": "These are brain games, consisting of five console games.",
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
