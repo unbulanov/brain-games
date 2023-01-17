@@ -3,23 +3,28 @@ import getRandom from '../random.js';
 
 const descriptionGame = 'What number is missing in the progression?';
 
-const progression = () => {
-  const newArray = [];
+const getProgression = () => {
+  const progression = [];
   const startProgression = getRandom(1, 100);
   const stepProgression = getRandom(1, 5);
   const lengthProgression = 10;
 
   for (let i = 0; i < stepProgression * lengthProgression; i += stepProgression) {
-    newArray.push(startProgression + i);
+    progression.push(startProgression + i);
   }
-  const hiddenEl = getRandom(1, 9);
-  const newArray2 = newArray[hiddenEl];
-  const result = newArray2;
-  newArray[hiddenEl] = '..';
-
-  return [newArray.join(' ').toString(), result.toString()];
+  return progression;
 };
 
-playGame(descriptionGame, progression);
+const getRound = () => {
+  const rawProgression = getProgression();
+  const hiddenIndex = getRandom(1, 9);
+  const newProgression = rawProgression[hiddenIndex];
+  const result = newProgression;
+  rawProgression[hiddenIndex] = '..';
 
-export default progression;
+  return [rawProgression.join(' ').toString(), result.toString()];
+};
+
+const startProgressionGame = () => playGame(descriptionGame, getRound);
+
+export default startProgressionGame;
