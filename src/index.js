@@ -8,9 +8,9 @@ const gameEngine = (descriptionGame, taskGame) => {
 
   console.log(descriptionGame);
 
-  const rounds = 3;
+  const roundsCount = 3;
 
-  for (let i = 0; i < rounds; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = taskGame();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
