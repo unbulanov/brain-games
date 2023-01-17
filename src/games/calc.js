@@ -3,7 +3,7 @@ import getRandom from '../random.js';
 
 const descriptionGame = 'What is the result of the expression?';
 
-const calc = () => {
+const calculate = () => {
   const operators = ['+', '-', '*'];
   const number1 = getRandom(1, 25);
   const number2 = getRandom(1, 25);
@@ -29,6 +29,6 @@ const calc = () => {
   return [question, correctAnswer];
 };
 
-playGame(descriptionGame, calc);
+playGame(descriptionGame, calculate);
 
-export default calc;
+export default calculate;
