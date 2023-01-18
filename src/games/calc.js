@@ -17,7 +17,7 @@ const calculate = (number1, operator, number2) => {
       correctAnswer = number1 * number2;
       break;
     default:
-      console.log('Error');
+      throw new Error(`Unknown operator: '${operator}'`);
   }
   return correctAnswer;
 };
